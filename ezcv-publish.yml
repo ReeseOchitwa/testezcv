@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs: 
       version_number:
-        description: version number
+        description: Version Number
         required: true
         type: string
       description: 
-        description: input changes
+        description: Changes
         required: true
         type: string
     
@@ -19,7 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print inputs
-      run: echo Inputs are ${{ inputs.version_number }} ${{ inputs.description }} 
+      run: |
+        echo Inputs are ${{ inputs.version_number }} ${{ inputs.description }} 
 
     - name: Checkout repo
       uses: actions/checkout@v2
