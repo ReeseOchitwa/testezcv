@@ -7,7 +7,7 @@ on:
         description: Version number
         required: true
         type: string
-      description: 
+      changes_description: 
         description: Changes
         required: true
         type: string
@@ -20,7 +20,7 @@ jobs:
     steps:
     - name: Print inputs
       run: |
-        echo Inputs are ${{ inputs.version_number }} ${{ inputs.description }} 
+        echo Inputs are ${{ inputs.version_number }} ${{ inputs.changes_description }} 
 
     - name: Checkout repo
       uses: actions/checkout@v2
